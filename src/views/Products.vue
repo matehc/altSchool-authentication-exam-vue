@@ -1,7 +1,7 @@
 <template>
     <Loading v-if="isLoading" />
     <div v-else class="products__wrapper">
-            <router-link class="product-link" v-for="product in products" :key="product.id" tag="div" :to="{ name: 'ProductDetails', params: { id: product.id, slug: `${product.title.split(' ').join('-')}-details` } }
+            <router-link class="product-link" v-for="product in products" :key="product.id" :to="{ name: 'ProductDetails', params: { id: product.id, slug: `${product.title.split(' ').join('-')}-details` } }
             ">
                 <div class="product__container">
                     <img class="product__img" :src="product.thumbnail" alt="">
